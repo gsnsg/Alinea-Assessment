@@ -35,6 +35,7 @@ class TrendingVC: UIViewController {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        tableView.showsVerticalScrollIndicator = false
         self.tableView.register(TrendingTableViewCell.self, forCellReuseIdentifier: trendingCellId)
     }
     

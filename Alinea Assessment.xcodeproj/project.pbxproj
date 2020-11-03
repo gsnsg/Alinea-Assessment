@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		325D9A9D25518790009C4C0D /* ThemesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325D9A9C25518790009C4C0D /* ThemesCollectionView.swift */; };
 		325D9AA0255189DD009C4C0D /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325D9A9F255189DD009C4C0D /* MenuCell.swift */; };
 		325D9AA425519331009C4C0D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325D9AA325519331009C4C0D /* UIImage+Extensions.swift */; };
 		325D9AA7255193F8009C4C0D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325D9AA6255193F8009C4C0D /* String+Extensions.swift */; };
@@ -20,6 +19,7 @@
 		3261102C25474EE5003DE9CA /* EquitanSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3261102B25474EE5003DE9CA /* EquitanSans-Light.otf */; };
 		3275CDA6254FD0F1000E3B79 /* CategoryTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3275CDA5254FD0F1000E3B79 /* CategoryTabelViewCell.swift */; };
 		3275CDA9254FD400000E3B79 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3275CDA8254FD400000E3B79 /* TrendingTableViewCell.swift */; };
+		32A0F70825519AB3000A1EAE /* NotificationName+Extenions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A0F70725519AB3000A1EAE /* NotificationName+Extenions.swift */; };
 		32A6B0C12546EF4C00C1AA00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6B0C02546EF4C00C1AA00 /* AppDelegate.swift */; };
 		32A6B0C32546EF4C00C1AA00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6B0C22546EF4C00C1AA00 /* SceneDelegate.swift */; };
 		32A6B0C52546EF4C00C1AA00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6B0C42546EF4C00C1AA00 /* ViewController.swift */; };
@@ -33,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		325D9A9C25518790009C4C0D /* ThemesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesCollectionView.swift; sourceTree = "<group>"; };
 		325D9A9F255189DD009C4C0D /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		325D9AA325519331009C4C0D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		325D9AA6255193F8009C4C0D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		3261102B25474EE5003DE9CA /* EquitanSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EquitanSans-Light.otf"; sourceTree = "<group>"; };
 		3275CDA5254FD0F1000E3B79 /* CategoryTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTabelViewCell.swift; sourceTree = "<group>"; };
 		3275CDA8254FD400000E3B79 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
+		32A0F70725519AB3000A1EAE /* NotificationName+Extenions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extenions.swift"; sourceTree = "<group>"; };
 		32A6B0BD2546EF4C00C1AA00 /* Alinea Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alinea Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A6B0C02546EF4C00C1AA00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32A6B0C22546EF4C00C1AA00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,6 @@
 				32611022254738F0003DE9CA /* MenuBar.swift */,
 				3275CDA5254FD0F1000E3B79 /* CategoryTabelViewCell.swift */,
 				3275CDA8254FD400000E3B79 /* TrendingTableViewCell.swift */,
-				325D9A9C25518790009C4C0D /* ThemesCollectionView.swift */,
 				325D9A9F255189DD009C4C0D /* MenuCell.swift */,
 			);
 			path = Views;
@@ -104,6 +103,7 @@
 				325D9AA6255193F8009C4C0D /* String+Extensions.swift */,
 				325D9AA92551941E009C4C0D /* UIColor+Extensions.swift */,
 				325D9AAC2551947A009C4C0D /* UIView+Extensions.swift */,
+				32A0F70725519AB3000A1EAE /* NotificationName+Extenions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,9 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				325D9AA0255189DD009C4C0D /* MenuCell.swift in Sources */,
+				32A0F70825519AB3000A1EAE /* NotificationName+Extenions.swift in Sources */,
 				32A6B0C52546EF4C00C1AA00 /* ViewController.swift in Sources */,
 				32A6B0C12546EF4C00C1AA00 /* AppDelegate.swift in Sources */,
-				325D9A9D25518790009C4C0D /* ThemesCollectionView.swift in Sources */,
 				325D9AA7255193F8009C4C0D /* String+Extensions.swift in Sources */,
 				32611023254738F0003DE9CA /* MenuBar.swift in Sources */,
 				3261101C254729E4003DE9CA /* ExploreViewController.swift in Sources */,

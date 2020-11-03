@@ -145,5 +145,3 @@ extension TabBarController {
 
 }
 
-
-// Get an image with an clear view

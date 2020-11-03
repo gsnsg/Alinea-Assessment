@@ -19,13 +19,6 @@ class MenuCell: UICollectionViewCell {
         return label
     }()
     
-    // Clear button
-    let button: UIButton = {
-        let button = UIButton()
-        button.isUserInteractionEnabled = true
-        return button
-    }()
-    
     let rightBorder: UIView = {
         let view = UIView()
         return view
@@ -46,6 +39,8 @@ class MenuCell: UICollectionViewCell {
     // Highlight selected cell
     override var isSelected: Bool {
         didSet {
+            // Send Notification to change page
+            NotificationCenter.default.post(name: .changePageNotification, object: nil, userInfo: ["displayPage" : id])
             label.textColor = isSelected ? .customPurple : .customBlack
             emptyLabel.backgroundColor = isSelected ? .underlinePurple : .white
     
@@ -95,23 +90,15 @@ class MenuCell: UICollectionViewCell {
     
     
     func setupViews() {
-        addSubview(button)
+        
+        // Add Subviews
         addSubview(label)
         addSubview(emptyLabel)
         
-        button.translatesAutoresizingMaskIntoConstraints = false
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         emptyLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        //Button Constraints
-        button.tag = id
-        button.backgroundColor = .clear
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: topAnchor),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
         // Common constraints for both labels
         label.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         label.heightAnchor.constraint(equalToConstant: 19).isActive = true
@@ -135,7 +122,9 @@ class MenuCell: UICollectionViewCell {
         emptyLabel.text = String(repeating: " ", count: label.text!.count)
         emptyLabel.textColor = .white
         emptyLabel.font = UIFont(name: "EquitanSans-Bold", size: 19)!
+        
     }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

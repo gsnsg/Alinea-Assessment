@@ -1,7 +1,7 @@
 import UIKit
 
 
-class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MenuBar: UIView {
    
     var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -12,9 +12,6 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }()
     
     private let cellId = "menuCell"
-    
-    
-    var menuItems:[UIButton] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,8 +33,16 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
     
     
-    
+    func selectItem(row: Int) {
+        collectionView.selectItem(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+    }
         
+   
+   
+}
+
+
+extension MenuBar: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
@@ -45,7 +50,6 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
         cell.configure(withId: indexPath.row)
-        menuItems.append(cell.button)
         return cell
     }
     
@@ -60,11 +64,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected IndexPath: \(indexPath.row)")
+        print("Selected IndexPath (Menu Bar)t: \(indexPath.row)")
     }
     
-    func selectItem(row: Int) {
-        collectionView.selectItem(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .centeredHorizontally)
-    }
 }
 
