@@ -87,12 +87,14 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     func addBackgroundViews() {
-        print(view.safeAreaInsets.bottom)
+        
         let itemWidth = tabBar.frame.width / CGFloat(tabBar.items!.count)
+        
         for index in 0 ..< 5 {
             let bgView = UIView(frame: CGRect(x: itemWidth * CGFloat(index), y: 0, width: itemWidth, height: tabBar.frame.height + 25))
             bgView.backgroundColor = index == 0 ? UIColor(red: 0.307, green: 0.311, blue: 0.809, alpha: 1.0) : .white
             bgView.layer.cornerRadius = 8
+            
             if index == 0 {
                 bgView.layer.maskedCorners = [.layerMinXMinYCorner]
             } else if index == 4 {
@@ -101,6 +103,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
                 bgView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
             }
             bgView.clipsToBounds = true
+
             tabBar.insertSubview(bgView, at: index)
             backgroundViews.append(bgView)
         }
@@ -144,15 +147,3 @@ extension TabBarController {
 
 
 // Get an image with an clear view
-extension UIImage {
-     
-    class func imageWithColor(_ color: UIColor, size: CGSize) -> UIImage {
-        let image = UIImage()
-        UIGraphicsBeginImageContext(size)
-        image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!
-    }
-
-}

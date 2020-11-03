@@ -4,8 +4,8 @@ class ViewController: UIViewController {
 
     let label: UILabel = {
         let label = UILabel()
-        label.text = "Hello World!"
-        label.backgroundColor = .systemRed
+        label.text = "Oops! It's empty here"
+        label.backgroundColor = .systemPink
         label.textColor = .white
         label.textAlignment = .center
         label.layer.cornerRadius = 12
